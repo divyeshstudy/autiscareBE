@@ -1,5 +1,7 @@
 package com.api.autiscare.utility.idgenerator;
 
+import java.io.Serializable;
+
 /**
  * @author divyesh.dwivedi
  */
@@ -29,6 +31,18 @@ public class IdGenerator {
     public static String getUserMappingId()
     {
         return "U".concat(getIdentifier());
+    }
+
+    public static String getPaymentId()
+    {
+        return "P".concat(getIdentifier());
+    }
+
+    public static String getTherapySessionId()
+    {
+        System.out.println("getTherapySessionId = " + "TSID".concat(getIdentifier()));
+
+        return "TSID".concat(getIdentifier());
     }
 
     private static String getIdentifier(){
